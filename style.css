@@ -14,14 +14,18 @@
 }
 
 
-/* 1. Reset standard browser spacing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 2. Header background */
+
+body {
+    overflow-x: hidden;
+}
+
+/* Header background */
 header {
     background-color: var(--secondary);
     width: 100%;
@@ -40,7 +44,7 @@ header {
     justify-content: space-between;
 }
 
-/* 4. Logo section */
+/*  Logo section */
 .logo {
     display: flex;
     align-items: center;
@@ -61,7 +65,7 @@ header {
     font-size: 22px;
 }
 
-/* 5. Nav links section */
+/*  Nav links section */
 nav {
     flex: 1;
     display: flex;
@@ -90,10 +94,8 @@ nav li a {
 
 nav li a:hover {
     color: var(--accent);
-    /* High contrast hover */
 }
 
-/* 6. Buttons section */
 .nav-buttons {
     display: flex;
     align-items: center;
@@ -141,6 +143,7 @@ nav li a:hover {
     background-position: center;
     background-repeat: no-repeat;
 
+    width: 100%;
     display: flex;
     align-items: center;
 }
@@ -168,7 +171,6 @@ nav li a:hover {
 
 .hero-title span {
     color: #ff4d6d;
-    /* soft vibrant pink otherwise accent */
 }
 
 .hero-text {
@@ -198,19 +200,12 @@ nav li a:hover {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    /* THIS replaces all those margins */
     color: white;
 }
 
 
 
-
-
-
-
 /* Products Section */
-
-
 section {
     display: block;
 }
@@ -219,27 +214,25 @@ section {
     text-align: center;
     max-width: 700px;
     margin: 0 auto 60px auto;
-    /* Centers the text and adds balanced space below it */
+
 }
 
 .product-container {
     width: 95%;
     max-width: 1200px;
     margin: 0 auto;
-    /* This is the "Pro" way to keep everything in the middle */
+
     display: flex;
     flex-direction: column;
-    /* Stack header on top of cards */
     align-items: center;
-    /* Center the stack */
 }
 
 
 
 .products {
-    /* This creates a soft "glow" from the top left */
     background: linear-gradient(135deg, #ffffff 0%, #b8fbff 100%);
     padding: 100px 0;
+    width: 100%;
     position: relative;
     border-top: 4px solid var(--secondary);
 }
@@ -271,7 +264,6 @@ section {
 .product-grid {
     display: flex;
     flex-direction: row;
-    /* Forces them side-by-side */
     justify-content: center;
     gap: 30px;
     width: 100%;
@@ -287,8 +279,6 @@ section {
 
 div {
     display: block;
-    unicode-bidi: isolate;
-    /* what the helli */
 }
 
 .product-info {
@@ -307,22 +297,17 @@ div {
     background: var(--yellow);
     padding: 6px 15px;
     border-radius: 10px;
-    /* Bubbly shape */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .product-title {
     font-family: 'Montserrat', sans-serif;
-    /* Keep it modern, not serif */
     font-size: 22px;
     font-weight: 800;
     color: var(--white);
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1,h2,h3,h4 {
     font-family: "Playfair Display", serif;
     font-weight: 700;
     letter-spacing: 0.5px;
@@ -367,7 +352,6 @@ p {
 
 .product-card {
     background: var(--secondary);
-    /* Your primary teal */
     border-radius: 20px;
     transition: transform 0.3s ease;
 }
@@ -383,15 +367,14 @@ p {
     /* Force a consistent height for all images */
     overflow: hidden;
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-    /* Subtle separator */
     border-radius: 15px 15px 0 0;
 }
 
 .product-img img {
     width: 100%;
     height: 100%;
+    
     object-fit: cover;
-    /* This is the "Pro" secret to uniform cards */
     display: block;
 }
 
@@ -400,20 +383,17 @@ p {
     padding: 25px;
 }
 
-/* FOOTER SECTION */
 
-/* FOOTER SECTION - Seamless & Professional */
+/* FOOTER SECTION */
 footer {
     background: linear-gradient(135deg, #ffffff 0%, #b8fbff 100%);
-    /* Deep Teal background */
+    width: 100%;
     padding: 100px 0;
     position: relative;
     border-top: 4px solid var(--secondary);
     margin-top: 0;
-    /* Ensures no white line between section and footer */
+   
 }
-
-
 
 .footer-column h3 {
     color: var(--accent);
@@ -428,18 +408,14 @@ footer {
 .footer-content {
     display: flex;
     flex-direction: row;
-    /* Change 'center' to 'flex-start' to pull them to the left together */
     justify-content: flex-start;
-    /* Increase this gap to exactly the distance you want between them */
     gap: 80px;
     width: 100%;
-    /* Add a left margin if you want them centered as a group on the page */
-    padding-left: 10%;
+    padding: 0 20px;
 }
 
 p {
     color: var(--secondary);
-    /* Change this to 100% so the next column can sit right next to the text */
     max-width: 100%;
 }
 
@@ -457,7 +433,6 @@ p {
 
 .footer-links i {
     color: #00bac7;
-    /* Brand mint color for icons instead of yellow */
     margin-right: 12px;
     width: 18px;
     text-align: center;
@@ -525,7 +500,7 @@ i {
     height: 100vh;
 
     background:
-        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
         url("1.png");
 
     background-size: cover;
@@ -539,34 +514,34 @@ i {
     margin-bottom: 12px;
     color: var(--white);
     letter-spacing: 2px;
-  
+
 }
 
 
 /* Admin heading */
 body.admin-login h2 {
-    
-     color: #ffffff;
+
+    color: #ffffff;
     margin-bottom: 20px;
     letter-spacing: 1px;
 }
 
 /* Login form box */
 body.admin-login form {
-  background: rgba(0, 150, 150, 0.85); /* same vibe, just softer */
-  backdrop-filter: blur(6px);
-  padding: 30px;
-  width: 340px;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.2);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    background: rgba(0, 150, 150, 0.85);
+    backdrop-filter: blur(6px);
+    padding: 30px;
+    width: 340px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 /* Labels */
 body.admin-login label {
     color: #e2eee8;
     font-size: 14px;
-    
+
 }
 
 /* Inputs */
@@ -575,7 +550,7 @@ body.admin-login input {
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 15px;
-      background: rgba(255,255,255,0.9);
+    background: rgba(255, 255, 255, 0.9);
     border: none;
     color: var(--secondary);
     border-radius: 6px;
@@ -583,8 +558,6 @@ body.admin-login input {
 }
 
 
-
-/* Input glow */
 body.admin-login input:focus {
     box-shadow: 0 0 8px #00d9ff;
 }
@@ -593,7 +566,7 @@ body.admin-login input:focus {
 body.admin-login button {
     width: 100%;
     padding: 10px;
-     background: linear-gradient(45deg, #1ecad3, #0f9aa3);
+    background: linear-gradient(45deg, #1ecad3, #0f9aa3);
     color: white;
     border: none;
     border-radius: 6px;
@@ -602,29 +575,22 @@ body.admin-login button {
 
 }
 
-/* Button hover */
 body.admin-login button:hover {
     box-shadow: 0 0 8px #2d686f;
 }
 
-/* Error message */
-body.admin-login {
-    margin-top: 15px;
-    text-align: center;
-    font-size: 14px;
-}
 
 /* BACK LINK */
 .back-link {
     text-align: center;
     margin-top: 20px;
-    
+
 }
 
 .back-link a {
     width: 100%;
     padding: 10px;
-     background: linear-gradient(45deg, #1ecad3, #0f9aa3);
+    background: linear-gradient(45deg, #1ecad3, #0f9aa3);
     color: white;
     border: none;
     border-radius: 6px;
@@ -641,11 +607,12 @@ body.admin-login {
 
 
 
-
 /* RESPONSIVE NAVBAR FOR PHONES TABLET */
 
-@media (max-width: 900px) {
 
+/* ── Tablet (≤ 900px) ── */
+
+@media (max-width: 900px) {
     .header-container {
         flex-direction: column;
         align-items: center;
@@ -663,14 +630,45 @@ body.admin-login {
         align-items: center;
         gap: 12px;
         width: 100%;
+        gap: 14px;
+        padding: 16px 20px;
     }
-
+ 
+    nav ul {
+        gap: 14px;
+    }
+ 
     .nav-buttons {
         justify-content: center;
         width: 100%;
     }
 }
-
+ 
+/* ── Mobile (≤ 600px) ── */
+@media (max-width: 600px) {
+    .header-container {
+        flex-direction: column;
+        gap: 12px;
+        padding: 14px 16px;
+    }
+ 
+    nav ul {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+ 
+    nav li a {
+        font-size: 12px;
+    }
+ 
+    .btn-primary,
+    .btn-secondary {
+        padding: 8px 14px;
+        font-size: 11px;
+    }
+}
+ 
 
 /* RESPONSIVE HERO SECTION */
 
