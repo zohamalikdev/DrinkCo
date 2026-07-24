@@ -14,7 +14,7 @@ DrinkCo is a modern, responsive frontend website designed for a beverage brand. 
 - JavaScript
 
 ## Live Demo
-https://zohamalikdev.github.io/DrinkCo/index.html
+https://zoha-malik01.github.io/DrinkCo/index.html
 
 ## Purpose of Project
 This project was built to improve frontend development skills and practice responsive web design principles.
