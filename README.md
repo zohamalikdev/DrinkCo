@@ -21,4 +21,4 @@ This project was built to improve frontend development skills and practice respo
 
 ## Author
 Zoha Malik  
-github.com/zohamalikdev
+github.com/zoha-malik01
